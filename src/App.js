@@ -2,7 +2,7 @@ import Form from "./Components/Form";
 import List from "./Components/List/List";
 import Card from "./Components/UI/Card";
 
-import "./App.css";
+import styles from "./App.module.css";
 
 const USERS = [
   {
@@ -13,7 +13,7 @@ const USERS = [
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app_wrapper}>
       {/* Form component */}
       <Card>
         <Form />

@@ -1,12 +1,13 @@
 import ListItem from './ListItem';
 
+import styles from './List.module.css';
+
 const List = props => {
     // props.users is [{}]
     let {name, age} = props.users[0];
     
-console.log(name, age)
     return (
-        <ul>
+        <ul className={styles.resp_list}>
             <ListItem name={name} age={age} />
         </ul>
     )

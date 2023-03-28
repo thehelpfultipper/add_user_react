@@ -1,0 +1,46 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(127, 128, 128, 0.8);
+}
+
+.modal_wrapper {
+  width: 560px;
+  height: 200px;
+  background: white;
+  position: fixed;
+  left: 50%;
+  top: calc(50% - 210px);
+  transform: translateX(-50%);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.modal_header,
+.modal_body {
+  padding-left: 15px;
+}
+
+.modal_header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.modal_body {
+  height: 45%;
+}
+
+.modal_action {
+  position: relative;
+}
+
+.modal_btn {
+  position: relative;
+  top: -25px;
+  right: -75%;
+}
+
+.modal_btn:hover {
+  cursor: pointer;
+}

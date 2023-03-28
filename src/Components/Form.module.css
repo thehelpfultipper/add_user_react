@@ -1,0 +1,50 @@
+.form_wrapper {
+  padding: 25px 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+}
+
+.form label {
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+  line-height: 0.5rem;
+}
+
+.form input {
+  border: 1px solid black;
+  padding: 12px;
+  width: 250px;
+  margin: 8px 0 25px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.form input:focus {
+  outline-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal__hide {
+  display: none;
+}
+
+.modal__blur {
+  filter: blur(2px);
+}
+
+.form__err input {
+    border: 1px solid red;
+}
+
+.form__err label,
+.form__err input {
+    color: red;
+}

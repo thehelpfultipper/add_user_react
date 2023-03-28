@@ -1,0 +1,7 @@
+.app_wrapper {
+    /* background-color: pink; */
+}
+
+.app_wrapper > * {
+    margin: 50px auto; 
+}
