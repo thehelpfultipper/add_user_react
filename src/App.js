@@ -1,6 +1,7 @@
 import Form from "./Components/Form";
 import List from "./Components/List/List";
 import Card from "./Components/UI/Card";
+import { useState } from "react";
 
 import styles from "./App.module.css";
 
@@ -12,16 +13,24 @@ const USERS = [
 ];
 
 function App() {
+  let [users, setUsers] = useState(USERS); // [ [{}], func ]
+
+  const newUserDataHandler = (data) => {
+    // data => {name, age} from form
+    setUsers((currUsers) => [...currUsers, data]);
+  };
+  console.log(users)
+
   return (
     <div className={styles.app_wrapper}>
       {/* Form component */}
       <Card>
-        <Form />
+        <Form newUser={newUserDataHandler} />
       </Card>
 
       {/* List component */}
       <Card>
-        <List users={USERS} />
+        <List users={users} />
       </Card>
     </div>
   );
