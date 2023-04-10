@@ -19,7 +19,7 @@ function App() {
     // data => {name, age} from form
     setUsers((currUsers) => [...currUsers, data]);
   };
-  console.log(users)
+ 
 
   return (
     <div className={styles.app_wrapper}>
