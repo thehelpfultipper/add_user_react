@@ -28,7 +28,7 @@
   outline-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal__show {
+/* .modal__show {
   display: block;
 }
 
@@ -38,7 +38,7 @@
 
 .modal__blur {
   filter: blur(2px);
-}
+} */
 
 .form__err input {
     border: 1px solid red;

@@ -5,32 +5,47 @@ import { useState } from "react";
 import styles from "./Form.module.css";
 
 const Form = (props) => {
-  let [name, setName] = useState('')
-  let [age, setAge] = useState('');
+  let [name, setName] = useState("");
+  let [age, setAge] = useState("");
+  let [err, setErr] = useState(false);
+  let [errMsg, setErrMsg] = useState();
 
   const nameHandler = (e) => {
     setName(e.target.value);
   };
 
   const ageHandler = (e) => {
-    setAge(+e.target.value);
+    setAge(e.target.value);
   };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
-    
+
+    // Check if input has error
+    if (name.length === 0 || age.length === 0) {
+      setErr(true);
+      setErrMsg("Please enter a valid name and age (between 1-100).");
+      return;
+    } else {
+      setErrMsg();
+    }
+
     let data = { name, age };
 
     props.newUser(data);
 
-    setName('');
-    setAge('')
+    setName("");
+    setAge("");
+  };
+
+  const errHandler = () => {
+    setErr(false);
   };
 
   return (
     <div className={styles.form_wrapper}>
-      <Modal className={styles.modal__hide} />
-      <form className={`${styles.form}`} onSubmit={formSubmitHandler}>
+      {err && <Modal error={errMsg} onError={errHandler} />}
+      <form className={`${styles.form} ${errMsg && styles.form__err}`} onSubmit={formSubmitHandler}>
         <label for="name">Name</label>
         <input
           type="text"
