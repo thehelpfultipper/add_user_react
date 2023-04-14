@@ -5,12 +5,7 @@ import { useState } from "react";
 
 import styles from "./App.module.css";
 
-const USERS = [
-  {
-    name: "THT",
-    age: 1.5,
-  },
-];
+const USERS = [];
 
 function App() {
   let [users, setUsers] = useState(USERS); // [ [{}], func ]
@@ -19,7 +14,12 @@ function App() {
     // data => {name, age} from form
     setUsers((currUsers) => [...currUsers, data]);
   };
- 
+
+  let noUser = <p className={styles.list_empty}>The list is empty, please add a user.</p>
+
+  if(users.length > 0) {
+    noUser = <List users={users} />;
+  } 
 
   return (
     <div className={styles.app_wrapper}>
@@ -30,7 +30,7 @@ function App() {
 
       {/* List component */}
       <Card>
-        <List users={users} />
+        {noUser}
       </Card>
     </div>
   );

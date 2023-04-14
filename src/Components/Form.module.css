@@ -44,7 +44,6 @@
     border: 1px solid red;
 }
 
-.form__err label,
-.form__err input {
+.form__err label {
     color: red;
 }

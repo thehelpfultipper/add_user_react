@@ -1,7 +1,9 @@
-.app_wrapper {
-    /* background-color: pink; */
-}
 
 .app_wrapper > * {
     margin: 50px auto; 
+}
+
+.list_empty {
+    text-align: center;
+    font-size: 1.05rem;
 }
