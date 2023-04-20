@@ -46,7 +46,7 @@ const Form = (props) => {
     <div className={styles.form_wrapper}>
       {err && <Modal error={errMsg} onError={errHandler} />}
       <form className={`${styles.form} ${errMsg && styles.form__err}`} onSubmit={formSubmitHandler}>
-        <label for="name">Name</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
@@ -55,7 +55,7 @@ const Form = (props) => {
           onChange={nameHandler}
         />
 
-        <label for="age">Age</label>
+        <label htmlFor="age">Age</label>
         <input
           type="number"
           id="age"
