@@ -24,7 +24,7 @@ function App() {
   return (
     <div className={styles.app_wrapper}>
       {/* Form component */}
-      <Card>
+      <Card className={styles.form_wrapper}>
         <Form newUser={newUserDataHandler} />
       </Card>
 

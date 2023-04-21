@@ -1,6 +1,6 @@
 import Button from "./UI/Button";
 import Modal from "./Modal";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 
 import styles from "./Form.module.css";
 
@@ -43,7 +43,7 @@ const Form = (props) => {
   };
 
   return (
-    <div className={styles.form_wrapper}>
+    <Fragment>
       {err && <Modal error={errMsg} onError={errHandler} />}
       <form className={`${styles.form} ${errMsg && styles.form__err}`} onSubmit={formSubmitHandler}>
         <label htmlFor="name">Name</label>
@@ -68,7 +68,7 @@ const Form = (props) => {
 
         <Button type="submit">Add User</Button>
       </form>
-    </div>
+    </Fragment>
   );
 };
 
