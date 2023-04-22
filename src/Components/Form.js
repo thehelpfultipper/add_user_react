@@ -1,25 +1,30 @@
 import Button from "./UI/Button";
 import Modal from "./Modal";
-import { useState, Fragment } from "react";
+import { useState, Fragment, useRef } from "react";
 
 import styles from "./Form.module.css";
 
 const Form = (props) => {
-  let [name, setName] = useState("");
-  let [age, setAge] = useState("");
+  // let [name, setName] = useState("");
+  // let [age, setAge] = useState("");
+  let nameRef = useRef(),
+      ageRef = useRef();
   let [err, setErr] = useState(false);
   let [errMsg, setErrMsg] = useState();
 
-  const nameHandler = (e) => {
-    setName(e.target.value);
-  };
+  // const nameHandler = (e) => {
+  //   setName(e.target.value);
+  // };
 
-  const ageHandler = (e) => {
-    setAge(e.target.value);
-  };
+  // const ageHandler = (e) => {
+  //   setAge(e.target.value);
+  // };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
+
+    let name = nameRef.current.value,
+        age = ageRef.current.value;
 
     // Check if input has error
     if (name.length === 0 || age.length === 0) {
@@ -34,8 +39,11 @@ const Form = (props) => {
 
     props.newUser(data);
 
-    setName("");
-    setAge("");
+    // Reset input values
+    // setName("");
+    // setAge("");
+    nameRef.current.value = '';
+    ageRef.current.value = '';
   };
 
   const errHandler = () => {
@@ -51,8 +59,9 @@ const Form = (props) => {
           type="text"
           id="name"
           name="name"
-          value={name}
-          onChange={nameHandler}
+          // value={name}
+          // onChange={nameHandler}
+          ref={nameRef}
         />
 
         <label htmlFor="age">Age</label>
@@ -62,8 +71,9 @@ const Form = (props) => {
           name="age"
           max="100"
           min="1"
-          value={age}
-          onChange={ageHandler}
+          // value={age}
+          // onChange={ageHandler}
+          ref={ageRef}
         />
 
         <Button type="submit">Add User</Button>
