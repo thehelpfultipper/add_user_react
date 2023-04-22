@@ -1,9 +1,10 @@
 import Button from "./UI/Button";
 import Card from "./UI/Card";
+import { createPortal } from "react-dom";
 
 import styles from "./Modal.module.css";
 
-const Modal = (props) => {
+const ModalOverlay = (props) => {
   return (
     <div className={styles.modal_overlay}>
       <Card className={styles.modal_wrapper}>
@@ -24,6 +25,13 @@ const Modal = (props) => {
         </div>
       </Card>
     </div>
+  );
+};
+
+const Modal = (props) => {
+  return createPortal(
+    <ModalOverlay error={props.error} onError={props.onError} />,
+    document.querySelector("#overlay-root")
   );
 };
 
