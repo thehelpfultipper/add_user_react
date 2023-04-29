@@ -15,8 +15,9 @@ Since this is my first official React project, I’ll be breaking it into parts 
 
 **✨ On Blog ✨** 
 <br>
-[How To Start Your React Journey: Create React App (Part 1)
-](https://thehelpfultipper.com/start-react-journey-create-react-app-part-1/)
+[How To Start Your React Journey: Create React App (Part 1)](https://thehelpfultipper.com/start-react-journey-create-react-app-part-1/)
+<br>
+[How To Build Dynamic React Components With JSX (Part 2)](https://thehelpfultipper.com/build-react-components-jsx-part-2/)
 <br>
 (Currently in progress...)
 <br><br>
