@@ -19,6 +19,8 @@ Since this is my first official React project, I’ll be breaking it into parts 
 <br>
 [How To Build Dynamic React Components With JSX (Part 2)](https://thehelpfultipper.com/build-react-components-jsx-part-2/)
 <br>
+[How To Add Styles To React Components (Part 3)](https://thehelpfultipper.com/add-styles-to-react-components-part-3/)
+<br>
 (Currently in progress...)
 <br><br>
 
