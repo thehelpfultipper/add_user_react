@@ -21,6 +21,10 @@ Since this is my first official React project, I’ll be breaking it into parts 
 <br>
 [How To Add Styles To React Components (Part 3)](https://thehelpfultipper.com/add-styles-to-react-components-part-3/)
 <br>
+[How To Master React State & Event Handlers (Part 4)](https://thehelpfultipper.com/master-react-state-event-handlers-part-4/)
+<br>
+[How To Handle React Lists And Conditionals (Part 5)](https://thehelpfultipper.com/handle-react-lists-and-conditionals-part-5/)
+<br>
 (Currently in progress...)
 <br><br>
 
