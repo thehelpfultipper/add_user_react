@@ -25,7 +25,7 @@ Since this is my first official React project, I’ll be breaking it into parts 
 <br>
 [How To Handle React Lists And Conditionals (Part 5)](https://thehelpfultipper.com/handle-react-lists-and-conditionals-part-5/)
 <br>
-(Currently in progress...)
+[How To Work With React Fragments, Portals, And Refs (Part 6)](https://thehelpfultipper.com/work-with-react-fragments-portals-and-refs-part-6/)
 <br><br>
 
 **✨ Class ✨** 
